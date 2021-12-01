@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void print(const list<string> &l)
+void printlist(const list<string> &l)
 {
     for (const string &i: l) {
         cout << i << endl;
@@ -18,9 +18,9 @@ int main() {
     l.emplace_back("Clooney");
     l.emplace_back("Damon");
     l.emplace_back("Garcia");
-    print(l);
+    printlist(l);
     l.sort();
-    print(l);
+    printlist(l);
 
     // Map
     map<string, int> ages;
