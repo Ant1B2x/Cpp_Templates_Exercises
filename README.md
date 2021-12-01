@@ -5,9 +5,19 @@ Bédex Antoine
 
 [TOC]
 
+# Preamble
+
+We've prepared a folder in which you will find a `Makefile` to help you building the sources. Here is how it works:
+
+- Open a terminal in this directory
+- Build all the exercises using the command `make all`
+- ... or build a specific exercise using the command `make <filename>` (eg. `make FunctionTemplate`)
+- Launch a program with `./<filename>` (eg. `./FunctionTemplate`)
+- You can clean all compiled items by using `make clean`
+
 # Function Templates
 
-This exercise will show you how to use function templates. It has already been presented in our seminar trailer. Open the file `Sorting.cpp`, you will find a method to print arrays (`printarr`), a method to sort arrays (`sort`) and a main program. Execute the program, it should print a non-sorted array, sort it, and then print it again. Your task will be to convert these first two methods in order to make them work with arrays of any kind (not only `int` arrays) in a way that such a main function should compile and work:
+This exercise will show you how to use function templates. It has already been presented in our seminar trailer. Open the file `FunctionTemplate.cpp`, you will find a method to print arrays (`printarr`), a method to sort arrays (`sort`) and a main program. Execute the program, it should print a non-sorted array, sort it, and then print it again. Your task will be to convert these first two methods in order to make them work with arrays of any kind (not only `int` arrays) in a way that such a main function should compile and work:
 
 ```c++
 int main()
