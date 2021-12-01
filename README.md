@@ -40,11 +40,9 @@ We now want to change the sort algorithm for, and only for, `char` arrays. Inste
 
 ### Resources
 
-https://www.cplusplus.com/doc/oldtutorial/templates/
-
-https://www.geeksforgeeks.org/templates-cpp/
-
-https://www.geeksforgeeks.org/template-specialization-c/
+1. https://www.cplusplus.com/doc/oldtutorial/templates/
+2. https://www.geeksforgeeks.org/templates-cpp/
+3. https://www.geeksforgeeks.org/template-specialization-c/
 
 # From C-style Macros to C++ Templates
 
@@ -92,6 +90,5 @@ In the file `TemplateMetaprogramming.cpp`, using template metaprogramming, imple
 ### Resources
 
 1. https://en.wikipedia.org/wiki/Fibonacci_number
-
 2. https://en.wikipedia.org/wiki/Template_metaprogramming
 
