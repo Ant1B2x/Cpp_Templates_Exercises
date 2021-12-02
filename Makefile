@@ -1,13 +1,17 @@
-CXX=clang++
-CXXFLAGS=-Wall -Werror -std=c++14
+CC=gcc
+CCFLAGS=-Wall -Werror
+CXX=g++
+CXXFLAGS=$(CCFLAGS) -std=c++14
 
-all: $(patsubst %.cpp, %.out, $(wildcard *.cpp))
+all: $(patsubst %.c, %.outC, $(wildcard *.c)) $(patsubst %.cpp, %.outCPP, $(wildcard *.cpp))
 
-%.out: %.cpp Makefile
-	$(CXX) $(CXXFLAGS) $< -o $(@:.out=)
+%.outC: %.c Makefile
+	$(CC) $(CCFLAGS) $< -o $(@:.outC=)
 
-clean: $(patsubst %.cpp, %.clean, $(wildcard *.cpp))
+%.outCPP: %.cpp Makefile
+	$(CXX) $(CXXFLAGS) $< -o $(@:.outCPP=)
+
+clean: $(patsubst %.c, %.clean, $(wildcard *.c)) $(patsubst %.cpp, %.clean, $(wildcard *.cpp))
 
 %.clean:
 	rm -f $(@:.clean=)
-

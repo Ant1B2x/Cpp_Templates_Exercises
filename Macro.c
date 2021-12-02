@@ -1,7 +1,3 @@
-/* To compile this file you can use in your terminal :
-   gcc -Wall -Werror Macro.c app
-   you can then run app using "./app" to see what this program outputs */
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -59,7 +55,4 @@ int main(int argc, char** argv)
         printf("%d ", array2[i]);
     }
     printf("]\n");
-
-    
-
 }
