@@ -58,9 +58,40 @@ We now want to change the sort algorithm for, and only for, `char` arrays. Inste
 
 Lorem ipsum
 
+### Resources
+
+1. Those of the first exercise
+2. https://stackoverflow.com/questions/7256203/how-to-implement-a-generic-macro-in-c
+3. https://stackoverflow.com/questions/12863455/using-preprocessor-directives-to-define-generic-functions-in-c
+
 # Class Templates
 
-Lorem ipsum
+In this exercise, you will be brought to create a generic class using class templates. In the file `Pair.h`, implement a class with the following requirements:
+
+- The class is a template class with two typename arguments, `T` and `Q`
+- The class has two private members, `first` and `second`, respectively of type `T` and `Q`
+- The class has a constructor that receives two parameters of types `T` and `Q`, and that assigns the values of these parameters to `first` and `second`
+- The class has getters for `first` and `second`
+- The class has a method `printMax` that prints the largest value between `first` and `second`
+
+**Hint:** although it is not advised, you can define a whole C++ class in a single `.h` (header) file instead of two `.h` and `.cpp` files (header and implementation). For this small exercise, we recommend you to do it this way.
+
+Once the `Pair` class is written, implement in the main of the file `ClassTemplate.cpp` the following actions:
+
+- Create a `Pair<int, int>` with two chosen values and then print its max
+- Create a `Pair<char, char>` with two chosen values and then print its max
+- Create a `Pair<char, int>` with the values `'K'` and `13` and then print its max
+- Create a `Pair<int, char>` with the values `13` and `'K'` and then print its max
+
+Then, in the file `Pair.h`, create a template specialization for the method `printMax`. This specialization should, for `Pair<char, int>` and only for this, have the following behavior: the parameter of type `int` will be compared of the position in the alphabet of the parameter of type `char`. For example, the value of A will be `1` instead of `65` (its ASCII position).
+
+Execute `ClassTemplate`. What do you observe? The output of `printMax` should be different for the pairs of types `Pair<char, int>` and `Pair<int, char>`. This is because we only specified a specialization for pairs of type `Pair<char, int>`. If we wanted to have the same behavior for pairs of type `Pair<int, char>`, we should have specialized `printMax` for this type as well.
+
+We can easily note one great weakness of class templates: when using N-parameters templates with specializations, the amount of redundant specializations (and thus boilerplate code) will increase exponentially.
+
+### Resources
+
+1. Those of the first exercise
 
 # Templates from STL
 
