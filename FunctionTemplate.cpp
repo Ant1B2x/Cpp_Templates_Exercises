@@ -2,7 +2,8 @@
 
 using namespace std;
 
-void printarr(int arr[], int length) {
+void printarr(int arr[], int length)
+{
     cout << '[';
     for (int i = 0; i < length; i++) {
         cout << arr[i];
@@ -13,7 +14,8 @@ void printarr(int arr[], int length) {
     cout << ']' << endl;
 }
 
-int* sort(int arr[], int length) {
+int* sort(int arr[], int length)
+{
     int* newarr = new int(length);
 
     // copy array

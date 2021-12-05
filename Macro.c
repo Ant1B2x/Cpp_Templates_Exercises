@@ -3,7 +3,7 @@
 
 // C Macro Template for a max function
 #define MAX(type) \
-type max_##type(type a, type b){ \
+type max_##type(type a, type b) { \
     if (a < b) return b; \
     else return a; \
 }
@@ -54,4 +54,6 @@ int main()
         printf("%d ", array2[i]);
     }
     printf("]\n");
+
+    return 0;
 }

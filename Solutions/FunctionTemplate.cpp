@@ -3,7 +3,8 @@
 using namespace std;
 
 template <typename T>
-void printarr(T arr[], int length) {
+void printarr(T arr[], int length)
+{
     cout << '[';
     for (int i = 0; i < length; i++) {
         cout << arr[i];
@@ -15,7 +16,8 @@ void printarr(T arr[], int length) {
 }
 
 template <typename T>
-T* sort(T arr[], int length) {
+T* sort(T arr[], int length)
+{
     T* newarr = (T*) malloc(length*sizeof(T));
 
     // copy array
@@ -38,7 +40,8 @@ T* sort(T arr[], int length) {
 }
 
 template <>
-char* sort<char>(char arr[], int length) {
+char* sort<char>(char arr[], int length)
+{
     char* newarr = new char(length);
 
     // copy array
