@@ -9,7 +9,7 @@ Bédex Antoine
 
 We've prepared a folder in which you will find a `Makefile` to help you building the sources. Here is how it works:
 
-- Open a terminal in this directory
+- Open a terminal in the sources directory
 - Build all the exercises using the command `make all`
 - ... or build a specific exercise using the command `make <filename>` (eg. `make FunctionTemplate`)
 - Launch a program with `./<filename>` (eg. `./FunctionTemplate`)
@@ -56,7 +56,11 @@ We now want to change the sort algorithm for, and only for, `char` arrays. Inste
 
 # From C-style Macros to C++ Templates
 
-Lorem ipsum
+In the file `Macro.c`, you will find two functions: `max` and `init_array`. They respectively return you the max of two values of a generic type and create an array of specific type and size, with a default value for each element. These two functions are generic implemented the "C-way", that means, using preprocessor macros. You will also find a main function using them.
+
+In this exercise you will have to rewrite the same functions using C++ templates in the file `MacroTemplate.cpp` (ie. re-implement `max` and `init_array` using C++ function templates). You will have to copy the main from `Macro.c`, however, it will require some modifications. **Hint:** see what you can remove.
+
+We see that the C++ syntax for defining generic function is much more easy and coherent with the rest of the language than C syntax (macros). Indeed, macros can produce really hard-to-read code when using them for long functions. 
 
 ### Resources
 
@@ -83,7 +87,7 @@ Once the `Pair` class is written, implement in the main of the file `ClassTempla
 - Create a `Pair<char, int>` with the values `'K'` and `13` and then print its max
 - Create a `Pair<int, char>` with the values `13` and `'K'` and then print its max
 
-Then, in the file `Pair.h`, create a template specialization for the method `printMax`. This specialization should, for `Pair<char, int>` and only for this, have the following behavior: the parameter of type `int` will be compared of the position in the alphabet of the parameter of type `char`. For example, the value of A will be `1` instead of `65` (its ASCII position).
+Then, in the file `Pair.h`, create a template specialization for the method `printMax`. This specialization should, for `Pair<char, int>` and only for this, have the following behavior: the parameter of type `int` will be compared to the position in the alphabet of the parameter of type `char`. For example, the value of A will be `1` instead of `65` (its ASCII position).
 
 Execute `ClassTemplate`. What do you observe? The output of `printMax` should be different for the pairs of types `Pair<char, int>` and `Pair<int, char>`. This is because we only specified a specialization for pairs of type `Pair<char, int>`. If we wanted to have the same behavior for pairs of type `Pair<int, char>`, we should have specialized `printMax` for this type as well.
 
